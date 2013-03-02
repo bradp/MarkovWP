@@ -51,7 +51,7 @@ function markovwp_generate_markov_text($length, $table, $look_forward) {
     $o = $char;
 
     for ($i = 0; $i < ($length / $look_forward); $i++) {
-        $newchar = return_weighted_char($table[$char]);            
+        $newchar = markovwp_return_weighted_char($table[$char]);            
         
         if ($newchar) {
             $char = $newchar;
